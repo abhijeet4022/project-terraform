@@ -1,0 +1,1 @@
+* Instead of create all VM and A record manually we will use terraform to create VM and A record.
