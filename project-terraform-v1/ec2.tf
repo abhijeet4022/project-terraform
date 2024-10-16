@@ -1,8 +1,8 @@
 # This resource creates an AWS EC2 instance for frontend with CentOS 8.
 resource "aws_instance" "frontend" {
-  ami           = "ami-0b4f379183e5706b9"  # CentOS 8 AMI
-  instance_type = "t2.micro"
-  vpc_security_group_ids = ["sg-0243a82da6118ecb6"]  #  `allow-all` SG ID.
+  ami                    = var.ami
+  instance_type          = var.instance_type
+  vpc_security_group_ids = var.sg
 
   tags = {
     Name = "frontend" # Component Name
@@ -11,9 +11,9 @@ resource "aws_instance" "frontend" {
 
 # This resource creates an AWS EC2 instance for mongodb with CentOS 8.
 resource "aws_instance" "mongodb" {
-  ami           = "ami-0b4f379183e5706b9"  # CentOS 8 AMI
-  instance_type = "t2.micro"
-  vpc_security_group_ids = ["sg-0243a82da6118ecb6"]  #  `allow-all` SG ID.
+  ami                    = var.ami
+  instance_type          = var.instance_type
+  vpc_security_group_ids = var.sg
 
   tags = {
     Name = "mongodb" # Component Name
@@ -22,9 +22,9 @@ resource "aws_instance" "mongodb" {
 
 # This resource creates an AWS EC2 instance for catalogue with CentOS 8.
 resource "aws_instance" "catalogue" {
-  ami           = "ami-0b4f379183e5706b9"  # CentOS 8 AMI
-  instance_type = "t2.micro"
-  vpc_security_group_ids = ["sg-0243a82da6118ecb6"]  #  `allow-all` SG ID.
+  ami                    = var.ami
+  instance_type          = var.instance_type
+  vpc_security_group_ids = var.sg
 
   tags = {
     Name = "catalogue" # Component Name
@@ -33,9 +33,9 @@ resource "aws_instance" "catalogue" {
 
 # This resource creates an AWS EC2 instance for redis with CentOS 8.
 resource "aws_instance" "redis" {
-  ami           = "ami-0b4f379183e5706b9"  # CentOS 8 AMI
-  instance_type = "t2.micro"
-  vpc_security_group_ids = ["sg-0243a82da6118ecb6"]  #  `allow-all` SG ID.
+  ami                    = var.ami
+  instance_type          = var.instance_type
+  vpc_security_group_ids = var.sg
 
   tags = {
     Name = "redis" # Component Name
@@ -44,9 +44,9 @@ resource "aws_instance" "redis" {
 
 # This resource creates an AWS EC2 instance for user with CentOS 8.
 resource "aws_instance" "user" {
-  ami           = "ami-0b4f379183e5706b9"  # CentOS 8 AMI
-  instance_type = "t2.micro"
-  vpc_security_group_ids = ["sg-0243a82da6118ecb6"]  #  `allow-all` SG ID.
+  ami                    = var.ami
+  instance_type          = var.instance_type
+  vpc_security_group_ids = var.sg
 
   tags = {
     Name = "user" # Component Name
@@ -55,9 +55,9 @@ resource "aws_instance" "user" {
 
 # This resource creates an AWS EC2 instance for cart with CentOS 8.
 resource "aws_instance" "cart" {
-  ami           = "ami-0b4f379183e5706b9"  # CentOS 8 AMI
-  instance_type = "t2.micro"
-  vpc_security_group_ids = ["sg-0243a82da6118ecb6"]  #  `allow-all` SG ID.
+  ami                    = var.ami
+  instance_type          = var.instance_type
+  vpc_security_group_ids = var.sg
 
   tags = {
     Name = "cart" # Component Name
@@ -66,9 +66,9 @@ resource "aws_instance" "cart" {
 
 # This resource creates an AWS EC2 instance for mysql with CentOS 8.
 resource "aws_instance" "mysql" {
-  ami           = "ami-0b4f379183e5706b9"  # CentOS 8 AMI
-  instance_type = "t2.micro"
-  vpc_security_group_ids = ["sg-0243a82da6118ecb6"]  #  `allow-all` SG ID.
+  ami                    = var.ami
+  instance_type          = var.instance_type
+  vpc_security_group_ids = var.sg
 
   tags = {
     Name = "mysql" # Component Name
@@ -77,9 +77,9 @@ resource "aws_instance" "mysql" {
 
 # This resource creates an AWS EC2 shipping for frontend with CentOS 8.
 resource "aws_instance" "shipping" {
-  ami           = "ami-0b4f379183e5706b9"  # CentOS 8 AMI
-  instance_type = "t2.small"
-  vpc_security_group_ids = ["sg-0243a82da6118ecb6"]  #  `allow-all` SG ID.
+  ami                    = var.ami
+  instance_type          = var.instance_type
+  vpc_security_group_ids = var.sg
 
   tags = {
     Name = "shipping" # Component Name
@@ -88,9 +88,9 @@ resource "aws_instance" "shipping" {
 
 # This resource creates an AWS EC2 instance for rabbitmq with CentOS 8.
 resource "aws_instance" "rabbitmq" {
-  ami           = "ami-0b4f379183e5706b9"  # CentOS 8 AMI
-  instance_type = "t2.micro"
-  vpc_security_group_ids = ["sg-0243a82da6118ecb6"]  #  `allow-all` SG ID.
+  ami                    = var.ami
+  instance_type          = var.instance_type
+  vpc_security_group_ids = var.sg
 
   tags = {
     Name = "rabbitmq" # Component Name
@@ -99,9 +99,9 @@ resource "aws_instance" "rabbitmq" {
 
 # This resource creates an AWS EC2 instance for payment with CentOS 8.
 resource "aws_instance" "payment" {
-  ami           = "ami-0b4f379183e5706b9"  # CentOS 8 AMI
-  instance_type = "t2.micro"
-  vpc_security_group_ids = ["sg-0243a82da6118ecb6"]  #  `allow-all` SG ID.
+  ami                    = var.ami
+  instance_type          = var.instance_type
+  vpc_security_group_ids = var.sg
 
   tags = {
     Name = "payment" # Component Name
