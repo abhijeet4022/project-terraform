@@ -15,7 +15,7 @@ variable "sg" {
 # The same domain name for the component will use in application config side.
 
 variable "zone_id" {
-  default = "Z03000202RXSEVOPTHMK1"
+  default     = "Z03000202RXSEVOPTHMK1"
   description = "The Zone ID for the Route 53 hosted zone."
 }
 
