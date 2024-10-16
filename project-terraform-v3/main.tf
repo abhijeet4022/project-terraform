@@ -1,11 +1,9 @@
-data "aws_ami" "ami" {
+module "infra" {
+  source = "./module/infra"
 
-  most_recent      = true
-  name_regex       = "Centos-8-DevOps-Practice"
-  owners           = [973714476881]
-
-}
-
-output "ami" {
-  value = data.aws_ami.ami.id
+  for_each      = var.components
+  instance_type = each.value["instance_type"]
+  name          = each.value["name"]
+  sg            = var.sg
+  zone_id       = var.zone_id
 }
