@@ -5,16 +5,22 @@ resource "aws_instance" "instance" {
   instance_type          = lookup(each.value, "instance_type", null)
   vpc_security_group_ids = var.sg
 
+
+  tags = {
+    Name = lookup(each.value, "name", null)
+  }
+
+
   ebs_block_device {
     device_name           = "/dev/sda1"  # Recommended for CentOS
     volume_size           = 10             # Specify the size in GiB
     delete_on_termination = true           # Delete the volume when the instance is terminated
 
+
+
     tags = {
       Name = "${lookup(each.value, "name", null)}-os-disk"  # Assign a name to the OS disk
     }
-  tags = {
-    Name = lookup(each.value, "name", null)
   }
 }
 
