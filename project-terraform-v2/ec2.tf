@@ -1,5 +1,5 @@
 variable "components" {
-  description = "This variable will hold the input value for components."
+  description = "Map of application components with their names and instance types."
   default     = {
     frontend  = { name = "frontend", instance_type = "t2.micro" }
     mongodb   = { name = "mongodb", instance_type = "t2.micro" }
@@ -16,13 +16,13 @@ variable "components" {
 
 
 # This resource creates an AWS EC2 instance for frontend with CentOS 8.
-resource "aws_instance" "frontend" {
+resource "aws_instance" "instance" {
   for_each = var.components
   ami                    = var.ami
-  instance_type          = each.value["instance_type"]
+  instance_type          = lookup(each.value, "instance_type", null)
   vpc_security_group_ids = var.sg
 
   tags = {
-    Name = each.value["name"]
+    Name = lookup(each.value, "name", null)
   }
 }
