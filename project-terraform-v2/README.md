@@ -12,4 +12,4 @@
 * Use the following command to run the playbook for a specific component:
     - `ansible-playbook -i <host>, -e component=<component_name> -e ansible_user=<username> -e ansible_password=<password> main.yml
    `
-Note : For ansible need to clone the ansible repo
+Note : For ansible need to clone the ansible repo 
