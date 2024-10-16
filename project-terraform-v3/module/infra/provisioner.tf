@@ -4,12 +4,12 @@ resource "null_resource" "local-exec" {
     command = <<EOF
 if [ -d /home/centos/project-ansible ]; then
   cd /home/centos/project-ansible
+  git pull
 else
   git clone https://github.com/abhijeet4022/project-ansible.git
   cd /home/centos/project-ansible
 fi
-git pull
-sleep 60
+sleep 30
 ansible-playbook -i ${var.name}-dev.learntechnology.cloud, main.yml -e ansible_user=centos -e ansible_user=DevOps321 -e component=${var.name}
 
 	EOF
