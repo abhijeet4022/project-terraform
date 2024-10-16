@@ -5,6 +5,12 @@ resource "aws_instance" "instance" {
   instance_type          = lookup(each.value, "instance_type", null)
   vpc_security_group_ids = var.sg
 
+  ebs_block_device {
+    tags = {
+      Name = "${lookup(each.value, "name", null)}-os-disk"  # Assign a name to the OS disk
+    }
+  }
+
   tags = {
     Name = lookup(each.value, "name", null)
   }
