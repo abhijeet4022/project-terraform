@@ -19,7 +19,7 @@ variable "zone_id" {
 # Component Variables
 variable "components" {
   description = "Map of application components with their names and instance types."
-  default     = {
+  default = {
     frontend  = { name = "frontend-dev", instance_type = "t2.micro" }
     mongodb   = { name = "mongodb-dev", instance_type = "t2.micro" }
     catalogue = { name = "catalogue-dev", instance_type = "t2.micro" }
