@@ -14,7 +14,6 @@ resource "aws_instance" "instance" {
     tags                  = { Name = "${lookup(each.value, "name", null)}-os-disk" }
   }
 
-
 }
 
 # This resource creates a DNS 'A' record for the component in Route 53.
