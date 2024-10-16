@@ -3,7 +3,7 @@
 * Modify the terraform argument input value where required.
 * Clone the repo in workstation and deploy the infra.
   * `sudo git clone https://github.com/abhijeet4022/project-terraform.git`
-  * `cd project-terraform/project-terraform-v1 ; terraform init`
+  * `cd project-terraform/project-terraform-v1`
   * `terraform init`
   * `terraform plan`
   * `terraform apply -auto-approve`
@@ -11,4 +11,4 @@
 * Use the following command to run the playbook for a specific component:
     - `ansible-playbook -i <host>, -e component=<component_name> -e ansible_user=<username> -e ansible_password=<password> main.yml
    `
-Note : For ansible need to clone the ansible repo
+Note : For ansible need to clone the ansible repo.
