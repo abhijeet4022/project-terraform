@@ -1,4 +1,4 @@
-variable "component" {
+variable "components" {
   description = "This variable will hold the input value for components."
   default     = {
     frontend  = { name = "frontend", instance_type = "t2.micro" }
@@ -17,7 +17,7 @@ variable "component" {
 
 # This resource creates an AWS EC2 instance for frontend with CentOS 8.
 resource "aws_instance" "frontend" {
-  for_each = var.component
+  for_each = var.components
   ami                    = var.ami
   instance_type          = each.value["instance_type"]
   vpc_security_group_ids = var.sg
