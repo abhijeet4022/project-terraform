@@ -6,6 +6,7 @@ if [ -d /home/centos/project-ansible ]; then
   cd /home/centos/project-ansible
   git pull
 else
+  cd /home/centos
   git clone https://github.com/abhijeet4022/project-ansible.git
   cd /home/centos/project-ansible
 fi
