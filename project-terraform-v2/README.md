@@ -3,8 +3,8 @@
 * Create one SG named `allow-all` and allow all ports from internet and use that on VM creation.
 * Modify the terraform argument input value where required in vars.tf file.
 * Clone the repo in workstation and deploy the infra.
-  * `sudo git clone https://github.com/abhijeet4022/project-terraform.git`
-  * `cd project-terraform/project-terraform-v2`
+  * `cd /home/centos ; sudo git clone https://github.com/abhijeet4022/project-terraform.git`
+  * `cd /home/centos/project-terraform/project-terraform-v2`
   * `terraform init`
   * `terraform plan`
   * `terraform apply -auto-approve`
