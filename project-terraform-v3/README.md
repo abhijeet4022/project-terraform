@@ -1,0 +1,1 @@
+* In V3 we will create the Infra and by using "local-exec" we will configure the application as well.
